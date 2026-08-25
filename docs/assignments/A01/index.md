@@ -63,7 +63,7 @@ The second handle has the same geometry on the opposite side of the clip. Thus, 
 
 **Disassembled Binder Clip with Measurements** 
 
-![Picture of Disassembled Clip with measurements](Clip Measurements.jpg)
+![Picture of Disassembled Clip with measurements](ClipMeasurements.jpg)
 
 **d)** Patent Research
 
