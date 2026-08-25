@@ -46,24 +46,24 @@ In general, the portfolio shows a lot of technical experience and explains why c
 
 **c)** Components and Photographs
 
-![Picture of Spring Steel Body](Bind.jpg)
-
 **Component 1 - Spring Steel Body:**
 The body is made of a piece of spring steel which has been folded into a shape that resembles a triangle with two opposing jaws. The converging sides of the body accumulate elastic energy when the jaws are opened up. The geometry of the structure leads to generation of a reactive force by the material which tries to bring the edges of the jaws together.
 
-![Picture of Wire Handle](Single.jpg)
+![Picture of Spring Steel Body](Bind.jpg)
 
 **Component 2 - First Wire Handle:**
 The handle is made by bending metal wires in the form of an elongated loop. By lengthening the lever arm, there is a decrease in the force applied by the user in order to deform the body of the spring and cause the jaws to open. The bent ends of the handle fit into the curved portions of the clip body.
 
-![Picture of two Wire Handles](Double.jpg)
+![Picture of Wire Handle](Single.jpg)
 
 **Component 3 - Second Wire Handle**
 The second handle has the same geometry on the opposite side of the clip. Thus, the two handles can be used to apply approximately symmetric forces on both sides of the spring-steel body resulting in separation of the jaws while minimizing twisting of the clip.
 
-![Picture of Disassembled Clip with measurements](Clip-Measurements.jpg)
+![Picture of two Wire Handles](Double.jpg)
 
 **Disassembled Binder Clip with Measurements** 
+
+![Picture of Disassembled Clip with measurements](Clip Measurements.jpg)
 
 **d)** Patent Research
 
