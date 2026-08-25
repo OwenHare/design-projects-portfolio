@@ -17,7 +17,7 @@ Additionally, it should be noted that the portfolio utilizes an extremely simple
 Overall, the portfolio proves itself efficient when used for giving a brief overview of the engineering experience of the author, but not so much for creating an engineering record. Detailed information on calculations, design choices, tests conducted, and file data should be provided for reproducing the project by another engineer.
 
 
-richardredpath.com
+[richardredpath.com](http://richardredpath.com/resume/redpath.html)
 
 
 The navigability of Richard Redpath’s portfolio is poor since there is much information about projects, patents, and his experience in one webpage. Even though the sections have names, it can take a reader more than 60 seconds to find what he wants without the prior knowledge of the portfolio organization.
