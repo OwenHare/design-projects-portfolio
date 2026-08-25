@@ -1,12 +1,12 @@
 # A1 – [Topic]
-![Placeholder Photo of signage from the game Deadlock](talismanBrandamulet.jpg)
+
 ## Objective
 The purpose of this assignment is to build and practice the ability to clearly communicate engineering decisions, methods, and results through the development and evaluation of an engineering portfolio. It also introduces how to structure and organize a portfolio so that engineering work is documented effectively, providing experience that can later be applied to creating and maintaining a professional portfolio.
 
 ## Analyze
 **Portfolio Analysis**
 
-https://github.com/jasondetaylor/Mechanical_Engineering_Design_Portfolio
+(https://github.com/jasondetaylor/Mechanical_Engineering_Design_Portfolio)
 
 Initially, the portfolio is relatively easy to navigate because all of the projects are presented within a simple GitHub repository. A reader can quickly scan through the available projects and locate a specific example of the author’s engineering work without having to move through multiple pages or menus.
 
@@ -33,7 +33,7 @@ In general, the portfolio shows a lot of technical experience and explains why c
 **Product Analysis**
 
 **Chosen Product:** Binder Clip
-//Image Here
+![Picture of Binder Clip](Clip.jpg)
 
 **a)** The primary mechanical function of the binder clip is to apply a compressive clamping force to a stack of thin sheet material using elastic deformation of a spring-steel body, while allowing the clamping jaws to be opened manually through lever-operated handles.
 
@@ -44,23 +44,30 @@ In general, the portfolio shows a lot of technical experience and explains why c
 **F** being the clamping force produced by the spring body, **k** as the effective spring stiffness of the folded steel body, and **δ** serving as the elastic displacement of the jaws from their unloaded position.
 
 **c)** Components and Photographs
-//Image Here
+
+![Picture of Spring Steel Body](Bind.jpg)
+
 **Component 1 - Spring Steel Body:**
 The body is made of a piece of spring steel which has been folded into a shape that resembles a triangle with two opposing jaws. The converging sides of the body accumulate elastic energy when the jaws are opened up. The geometry of the structure leads to generation of a reactive force by the material which tries to bring the edges of the jaws together.
 
-//Image Here
+![Picture of Wire Handle](Single.jpg)
+
 **Component 2 - First Wire Handle:**
 The handle is made by bending metal wires in the form of an elongated loop. By lengthening the lever arm, there is a decrease in the force applied by the user in order to deform the body of the spring and cause the jaws to open. The bent ends of the handle fit into the curved portions of the clip body.
 
-//Image Here
+![Picture of two Wire Handles](Double.jpg)
+
 **Component 3 - Second Wire Handle**
 The second handle has the same geometry on the opposite side of the clip. Thus, the two handles can be used to apply approximately symmetric forces on both sides of the spring-steel body resulting in separation of the jaws while minimizing twisting of the clip.
 
-//Image Here
+![Picture of Disassembled Clip with measurements](Clip-Measurements.jpg)
+
 **Disassembled Binder Clip with Measurements** 
 
 **d)** Patent Research
-//Image Here
+
+![Picture of Patent Design](ClipPatent.jpg)
+
 https://patents.google.com/patent/US1139627A/en
 
 The relevant original patent is US 1,139,627 A, "Paper-Binding Clip," invented by Louis E. Baltzley. Baltzley's patent describes a resilient sheet-metal body with converging sides and operating handles used to spread the jaws against the elastic resistance of the metal. The patent specifically discusses using the handles to obtain substantial leverage.
