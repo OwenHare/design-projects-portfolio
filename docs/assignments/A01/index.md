@@ -4,6 +4,7 @@
 The purpose of this assignment is to build and practice the ability to clearly communicate engineering decisions, methods, and results through the development and evaluation of an engineering portfolio. It also introduces how to structure and organize a portfolio so that engineering work is documented effectively, providing experience that can later be applied to creating and maintaining a professional portfolio.
 
 ## Analyze
+
 **Portfolio Analysis**
 
 [github.com/jasondetaylor](https://github.com/jasondetaylor/Mechanical_Engineering_Design_Portfolio)
@@ -16,6 +17,7 @@ Additionally, it should be noted that the portfolio utilizes an extremely simple
 
 Overall, the portfolio proves itself efficient when used for giving a brief overview of the engineering experience of the author, but not so much for creating an engineering record. Detailed information on calculations, design choices, tests conducted, and file data should be provided for reproducing the project by another engineer.
 
+**Portfolio Analysis**
 
 [richardredpath.com](http://richardredpath.com/resume/redpath.html)
 
