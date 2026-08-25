@@ -6,7 +6,7 @@ The purpose of this assignment is to build and practice the ability to clearly c
 ## Analyze
 **Portfolio Analysis**
 
-(https://github.com/jasondetaylor/Mechanical_Engineering_Design_Portfolio)
+[github.com/jasondetaylor](https://github.com/jasondetaylor/Mechanical_Engineering_Design_Portfolio)
 
 Initially, the portfolio is relatively easy to navigate because all of the projects are presented within a simple GitHub repository. A reader can quickly scan through the available projects and locate a specific example of the author’s engineering work without having to move through multiple pages or menus.
 
@@ -33,6 +33,7 @@ In general, the portfolio shows a lot of technical experience and explains why c
 **Product Analysis**
 
 **Chosen Product:** Binder Clip
+
 ![Picture of Binder Clip](Clip.jpg)
 
 **a)** The primary mechanical function of the binder clip is to apply a compressive clamping force to a stack of thin sheet material using elastic deformation of a spring-steel body, while allowing the clamping jaws to be opened manually through lever-operated handles.
@@ -68,7 +69,7 @@ The second handle has the same geometry on the opposite side of the clip. Thus, 
 
 ![Picture of Patent Design](ClipPatent.jpg)
 
-https://patents.google.com/patent/US1139627A/en
+[https://patents.google.com/patent/US1139627A/en](https://patents.google.com/patent/US1139627A/en)
 
 The relevant original patent is US 1,139,627 A, "Paper-Binding Clip," invented by Louis E. Baltzley. Baltzley's patent describes a resilient sheet-metal body with converging sides and operating handles used to spread the jaws against the elastic resistance of the metal. The patent specifically discusses using the handles to obtain substantial leverage.
 
@@ -85,7 +86,7 @@ The use of long wire handles increases the moment arm between the user's applied
 First, the primary objective of this portfolio is to show what assignments and course work have been completed within MEGR 2157. The audience for this portfolio includes graders and other students who might be looking for examples from the class, so the portfolio homepage should focus on the course, the course assignments, and the organization of the portfolio rather than personal information about the author. This will enable a visitor to immediately understand the contents and structure of the portfolio.
 
 **One Intentional Customization**
-I have intentionally customized the look of my portfolio by changing the color scheme from the default green and white combination to gray and white colors. By doing so, I created a more neutral and restrained design that makes sure that the focus of the user is on the technical content of the portfolio rather than on the portfolio interface itself. Moreover, a combination of gray and white is better in terms of consistency between text and headings, while being sufficiently contrasting.
+I have intentionally customized the look of my portfolio by changing the color scheme from the default green and white combination to blue and white colors for the assignments. By doing so, I created a more neutral and restrained design that makes sure that the focus of the user is on the technical content of the portfolio rather than on the portfolio interface itself, along with creating distinction of the Assignments page from the other pages.
 
 **Your Documentation Standard**
 I will maintain the standard of ensuring that each part of the portfolio is completed and updated in a timely manner, along with ensuring that I document all the assignments by organizing the data in such a way that the engineering analysis, methods, and results can be understood.
