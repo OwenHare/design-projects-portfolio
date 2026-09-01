@@ -72,9 +72,6 @@ This calculation uses the governing 25 kN pin load, the specified hardened tool 
 
 This page calculates the weight of the selected pins using an 11 mm diameter, a 22 mm length, and the specified hardened tool steel density. The weight of one pin was calculated first and then multiplied by four because the final design uses four identical pins. The combined pin weight was approximately 0.631 N.
 
-ALTER THIS ONE
-
-This page combines the analytical truss weight and the combined pin weight to determine the predicted total weight of the finished structure. The resulting hand calculated weight was approximately 129.33 N, corresponding to a mass of approximately 13.18 kg. Space was also included for the Creo mass and percent difference so the analytical prediction could be compared with the final CAD model.
 
 ## Decide
 _Which geometry did you select, and why?._
@@ -133,12 +130,20 @@ The final assembly shows the complete truss with four identical pins installed a
 
 The completed CAD model was evaluated using Creo mass properties to determine its predicted mass and weight. This result can be compared with the hand calculated mass of approximately 13.18 kg. Any difference between the two values is expected because the analytical calculation simplifies the member geometry, while Creo includes the enlarged joint regions, removed pin-hole material, and exact pin geometry.
 
+![Percentage Difference](percentDiff.jpg)
+
+The Creo model predicted a mass of 12.40 kg compared with the analytical mass of 13.18 kg, resulting in a 5.92% difference. The difference is caused by the simplified geometry used in the hand calculation compared with the exact member, joint, hole, and pin geometry represented in the CAD model.
+
 ## Communicate
 
 This assignment demonstrated that the geometry of a truss must be established before the member dimensions can be selected because the geometry determines how the external loads are distributed throughout the structure. The method of joints allowed the force in each member to be determined, and the member carrying the greatest force was then used to size every member according to the required safety factor.
 
 I also learned that different components of the same structure may require different stress models. The truss members were evaluated using axial loading, while the connecting pins were evaluated using single shear. The pin design therefore required a separate material property, safety factor, and minimum area calculation from the calculations used for the truss members.
 
-Finally, translating the analytical design into Creo showed that a simplified structural calculation does not represent every detail of the final geometry. The pin holes remove material from the joints, while the enlarged circular joint regions add material that is not included in the simplified member-length weight calculation. Comparing the hand calculated weight with the Creo mass properties provides a way to evaluate how closely the analytical model predicts the final physical design.
+Finally, translating the analytical design into Creo showed that a simplified structural calculation does not represent every detail of the final geometry. The pin holes remove material from the joints, while the enlarged circular joint regions add material that is not included in the simplified member length weight calculation. Comparing the hand calculated weight with the Creo mass properties provides a way to evaluate how closely the analytical model predicts the final physical design.
 
 I spent approximately 7 hours completing this assignment, including the structural analysis, member and pin sizing, weight calculations, CAD modeling, material assignment, and final assembly in Creo. A significant portion of this time was spent refining the CAD geometry to maintain the required member cross-sectional area around the pin joints and ensuring the final model accurately represented the analytical design.
+
+"Click Here" to access the hand written calculations
+"Click Here" to access the CREO images
+"Click Here" to access the Part Files and the Assembly
