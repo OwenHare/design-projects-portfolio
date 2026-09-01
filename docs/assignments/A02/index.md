@@ -144,6 +144,9 @@ Finally, translating the analytical design into Creo showed that a simplified st
 
 I spent approximately 7 hours completing this assignment, including the structural analysis, member and pin sizing, weight calculations, CAD modeling, material assignment, and final assembly in Creo. A significant portion of this time was spent refining the CAD geometry to maintain the required member cross-sectional area around the pin joints and ensuring the final model accurately represented the analytical design.
 
+
 ["Click Here"](https://drive.google.com/drive/folders/1XJk43d1j8HFMxcPQ7x6gGZ4kkBMrz5Ng?usp=sharing) to access the hand written calculations
+
 ["Click Here"](https://drive.google.com/drive/folders/1bvtOgYOvCaITK7XyOkEx3zTqtfm6WmS6?usp=sharing) to access the CREO images
+
 ["Click Here"](https://drive.google.com/drive/folders/1gBM3-Ej25bCn0RwxOG5qmXcQk6_TTdwJ?usp=sharing) to access the Part Files and the Assembly
