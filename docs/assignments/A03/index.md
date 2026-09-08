@@ -88,7 +88,7 @@ Safety Factor = 40 ksi / 30.07 ksi = 1.33
 
 The bar would therefore still remain below the specified yield strength, although the hole would substantially reduce the safety factor.
 
-## Lessons Learned
+## Communicate
 
 This assignment helped me understand how analytical calculations, parametric CAD, and finite element analysis can be connected in one design process. One of my main difficulties was learning the workflow in Onshape because I normally use Creo Parametric. I had to learn how Onshape handles variables, assemblies, mates, materials, and simulation.
 
