@@ -8,11 +8,11 @@ Using the direct tension elongation equation, I calculated the required length o
 
 ### Hand Calculations
 
-![Initial hand calculations](po1%282%29.jpg)
+![Initial hand calculations](po1.jpg)
 
 The first portion of my hand calculations shows the selected design criteria and the calculation of the circular cross-sectional area. I then rearranged the direct tension elongation equation to solve for the required length of the bar.
 
-![Remaining hand calculations](po2%282%29.jpg)
+![Remaining hand calculations](po2.jpg)
 
 I verified that the calculated geometry produced an axial deflection of approximately 0.009 in. I also calculated the volume, weight, nominal axial stress, and an initial theoretical safety factor.
 
@@ -20,11 +20,11 @@ I verified that the calculated geometry produced an axial deflection of approxim
 
 I created the bar using Onshape rather than Creo Parametric, which is the CAD software I normally use. The model was created parametrically so that the dimensions were controlled by variables rather than independent numerical dimensions.
 
-![Parametric variables and sketch](VariablesCorrected.PNG)
+![Parametric variables and sketch](o2.PNG)
 
 The diameter, applied force, maximum deflection, Young's modulus, area, and length were established as variables. The length was determined parametrically using the relationship derived from the axial deflection equation.
 
-![Parametric extrusion](ExtrudeCorrected.PNG)
+![Parametric extrusion](o3.PNG)
 
 The circular profile was extruded using the calculated length variable. This allows the geometry to automatically update if one of the design parameters is changed.
 
@@ -38,7 +38,7 @@ Aluminum 6061 was assigned to the bar in Onshape. Its Young's modulus of 68.9 GP
 
 ### Simulation Setup
 
-![FEA assembly and fixed support](o5%282%29.PNG)
+![FEA assembly and fixed support](o5.PNG)
 
 Because Onshape performs its structural simulation from an assembly, a support component was added at the left end of the bar. The support was fixed and the bar was fastened to it to represent the fixed boundary condition shown in the assignment.
 
@@ -46,13 +46,13 @@ A tensile force of 400 lbf was applied along the longitudinal axis of the bar at
 
 ### Deflection Map
 
-![FEA displacement map](o7%282%29.PNG)
+![FEA displacement map](o7.PNG)
 
 The FEA predicted a maximum displacement of 2.281 x 10^-4 m, which converts to approximately 0.00898 in. The displacement increased from approximately zero at the fixed end to its maximum at the loaded end, as expected for a uniform bar under direct tension.
 
 ### von Mises Stress Map
 
-![FEA von Mises stress map](o8%282%29.PNG)
+![FEA von Mises stress map](o8.PNG)
 
 The maximum von Mises stress reported by the FEA was approximately 8729 psi, or 8.729 ksi. This is below the specified aluminum yield strength of 40 ksi.
 
@@ -64,7 +64,7 @@ Therefore, the bar passes the yield-strength requirement.
 
 ## Part 3 - Design Reflection
 
-![Final comparison calculations](FinalCalculations.jpg)
+![Final comparison calculations](Final.jpg)
 
 The hand calculation predicted an axial deflection of 0.00900 in, while the finite element analysis predicted approximately 0.00898 in. The percent difference between the two methods was approximately 0.22%.
 
@@ -74,7 +74,9 @@ For this simple geometry, I would trust the analytical axial-deflection calculat
 
 ### Stress Concentration
 
-For the hypothetical pin-hole analysis, I assumed a substantial centered circular hole with d/W = 0.40. A stress concentration factor of approximately Kt = 3.69 was used from stress-concentration data based on Machinery's Handbook and Peterson's charts.
+![Pin-Hole analysis](Final2.jpg)
+
+For the hypothetical pin-hole analysis, I assumed a substantial centered circular hole with d/W = 0.40. A stress concentration factor of approximately Kt = 3.69 was used from stress-concentration data based on Peterson's charts.
 
 Using the nominal stress of approximately 8.149 ksi:
 
@@ -92,6 +94,10 @@ This assignment helped me understand how analytical calculations, parametric CAD
 
 Another issue I encountered was selecting the correct aluminum material and making sure its elastic modulus agreed with the value used in my hand calculations. After correcting the material properties, the FEA deflection became very close to the analytical result. This demonstrated how important consistent material properties are when comparing analytical and numerical models.
 
-The total time required to complete this assignment was **[ENTER ACTUAL TIME]**.
+The total time required to complete this assignment was around 4 hours.
 
 ## CAD File
+
+[Onshape File Download](https://drive.google.com/file/d/1qUV6JAnXO_b01NbLjBC5tA4XX9e6t7i4/view?usp=sharing)
+
+[View the Onshape Model](https://cad.onshape.com/documents/65543178355912bfd88818fe/w/79e8833f6a670c8522f2a09a/e/eb89c2f069f6aa6a332461c8?renderMode=0&uiState=6a9fae12806dd6c8e924c54f)
