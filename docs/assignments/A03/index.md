@@ -18,7 +18,7 @@ I verified that the calculated geometry produced an axial deflection of approxim
 
 ## CAD Model
 
-I created the bar using Onshape rather than Creo Parametric, which is the CAD software I normally use. The model was created parametrically so that the dimensions were controlled by variables rather than independent numerical dimensions.
+I created the bar using Onshape rather than Creo Parametric, which is the CAD software I normally use. The model was created parametrically so that the dimensions were controlled by variables rather than independent numerical dimensions. (Tranlsated to meters)
 
 ![Parametric variables and sketch](o2.PNG)
 
