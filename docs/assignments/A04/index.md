@@ -1,20 +1,5 @@
 # A4 – Motor Mount Design
 
-## Table of Contents
-
-- [Objective](#objective)
-- [Feature 1](#feature-1)
-- [Feature 2](#feature-2)
-- [Isometric Design Sketch](#isometric-design-sketch)
-- [CAD Model](#cad-model)
-- [Difficulties Encountered](#difficulties-encountered)
-- [Time Spent](#time-spent)
-- [Lessons Learned](#lessons-learned)
-- [CAD File](#cad-file)
-- [Sources and AI Policy](#sources-and-ai-policy)
-
----
-
 ## Objective
 
 The purpose of this assignment was to design a motor mount for the specified 24 V DC planetary gear motor. The mount was designed for both yield strength and a maximum deflection of 0.30 mm using a safety factor of 3.
