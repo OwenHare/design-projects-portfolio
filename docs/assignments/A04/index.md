@@ -112,7 +112,7 @@ I did not use a mirror or pattern to create the gussets. Each was created separa
 
 ![Final Motor Mount](A48.PNG)
 
-The completed mount includes the motor mounting holes, shaft clearance, wall mounting holes, reinforcing gussets, and edge fillets.
+The completed mount includes the motor mounting holes, shaft clearance, wall mounting holes, reinforcing gussets, and newly added edge fillets in unnecessary corners to save material and smoothen the finished result.
 
 ---
 
