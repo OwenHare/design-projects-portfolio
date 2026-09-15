@@ -1,4 +1,19 @@
-# A4 – [Motor Mount Design]
+# A4 – Motor Mount Design
+
+## Table of Contents
+
+- [Objective](#objective)
+- [Feature 1](#feature-1)
+- [Feature 2](#feature-2)
+- [Isometric Design Sketch](#isometric-design-sketch)
+- [CAD Model](#cad-model)
+- [Difficulties Encountered](#difficulties-encountered)
+- [Time Spent](#time-spent)
+- [Lessons Learned](#lessons-learned)
+- [CAD File](#cad-file)
+- [Sources and AI Policy](#sources-and-ai-policy)
+
+---
 
 ## Objective
 
@@ -8,9 +23,9 @@ PLA was selected as the material. The calculations resulted in a final uniform m
 
 ---
 
-# Feature 1
+## Feature 1
 
-## Free Body Diagram and Calculations
+**Free Body Diagram and Calculations**
 
 ![Feature 1 FBD](A4D1.jpg)
 
@@ -26,9 +41,9 @@ The calculated final deflection was approximately **0.276 mm**, which is below t
 
 ---
 
-# Feature 2
+## Feature 2
 
-## Free Body Diagram and Calculations
+**Free Body Diagram and Calculations**
 
 ![Feature 2 FBD](A4D3.jpg)
 
@@ -42,7 +57,7 @@ The calculated deflection for Feature 2 was approximately **0.211 mm**, which is
 
 ---
 
-# Isometric Design Sketch
+## Isometric Design Sketch
 
 ![Motor Mount Sketch](A4D5.jpg)
 
@@ -50,11 +65,11 @@ The design consists of a 60 mm horizontal feature and a 60 mm vertical feature w
 
 ---
 
-# CAD Model - Parametric
+## CAD Model
 
 The final motor mount was modeled in **Onshape**.
 
-## Parametric Setup
+**Parametric Setup**
 
 ![Onshape Variables](A41.PNG)
 
@@ -62,7 +77,7 @@ I created variables for the main dimensions of the motor mount, including width,
 
 ---
 
-## Main Profile
+**Main Profile**
 
 ![L Profile](A42.PNG)
 
@@ -70,7 +85,7 @@ The main profile was created on the Right plane. Both the horizontal and vertica
 
 ---
 
-## Main Extrusion
+**Main Extrusion**
 
 ![Main Extrusion](A43.PNG)
 
@@ -78,7 +93,7 @@ The L-shaped profile was symmetrically extruded to a total width of 40 mm, creat
 
 ---
 
-# Motor Mounting Holes
+**Motor Mounting Holes**
 
 ![Motor Hole Sketch](A44.PNG)
 
@@ -90,7 +105,7 @@ For this portion of the model, I successfully used a **circular pattern** to pro
 
 ---
 
-# Wall Mounting Holes
+**Wall Mounting Holes**
 
 ![Wall Mounting Holes](A46.PNG)
 
@@ -98,7 +113,7 @@ Four wall mounting holes were added to the vertical feature. I did **not** use a
 
 ---
 
-# Deflection-Minimizing Features
+**Deflection-Minimizing Features**
 
 ![Gussets](A47.PNG)
 
@@ -108,7 +123,7 @@ I did not use a mirror or pattern to create the gussets. Each was created separa
 
 ---
 
-# Final CAD Model
+**Final CAD Model**
 
 ![Final Motor Mount](A48.PNG)
 
@@ -116,7 +131,7 @@ The completed mount includes the motor mounting holes, shaft clearance, wall mou
 
 ---
 
-# Difficulties Encountered
+## Difficulties Encountered
 
 The main difficulty I encountered was using some of the pattern and mirror tools in Onshape. The circular pattern worked well for the motor mounting holes, but I had more difficulty using similar methods later in the model.
 
@@ -124,7 +139,7 @@ Instead of spending excessive time troubleshooting those operations, I found com
 
 ---
 
-# Time Spent
+## Time Spent
 
 The assignment took approximately **3 hours total**.
 
@@ -133,7 +148,7 @@ The assignment took approximately **3 hours total**.
 
 ---
 
-# Lessons Learned
+## Lessons Learned
 
 The main thing I learned from this assignment was how useful pattern tools can be for repeated geometry. The circular pattern made the motor mounting holes much faster and ensured that they stayed evenly spaced.
 
@@ -143,7 +158,7 @@ I also saw that **deflection controlled the design more than yield strength**, s
 
 ---
 
-# CAD File
+## CAD File
 
 [Download Motor Mount CAD File](https://drive.google.com/file/d/1dgF5FyQKgVDEeiyeLybpUoMEWpcFpO0k/view?usp=sharing)
 
@@ -151,6 +166,6 @@ I also saw that **deflection controlled the design more than yield strength**, s
 
 ---
 
-[Sources and AI Policy]
+## Sources and AI Policy
 
 *Open AI's ChatGPT was used in the making of this for formatting, and organizational purposes. All models, handwritten equations, and text has been handwritten by myself without the use of AI. Research of terminology was used through Google. Grammatical structure was completed with the assistance of Grammarly.*
