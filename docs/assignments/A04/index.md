@@ -148,3 +148,5 @@ I also saw that **deflection controlled the design more than yield strength**, s
 [Download Motor Mount CAD File](https://drive.google.com/file/d/1dgF5FyQKgVDEeiyeLybpUoMEWpcFpO0k/view?usp=sharing)
 
 [View Onshape Model](https://cad.onshape.com/documents/4e522e97aa1d706c27db0c90/w/8e0aed5a95dab14cb343562f/e/8f47933f7e1da870237f70cb?renderMode=0&uiState=6aa8e476404b6537c94c56a1)
+
+*Open AI's ChatGPT was used in the making of this for formatting, and organizational purposes. All models, handwritten equations, and text has been handwritten by myself without the use of AI. Research of terminology was used through Google. Grammatical structure was completed with the assistance of Grammarly.*
