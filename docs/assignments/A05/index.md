@@ -64,7 +64,7 @@ This assignment showed me how a design must follow the load path from one featur
 
 I spent 3 hours on calculations. I spent 20 minutes on the multiview sketches. I spent 1 hour compiling the work into GitHub. The total time was 4 hours and 20 minutes.
 
----
+-
 
 **Disclaimer regarding AI Usage**
 
