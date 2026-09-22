@@ -66,6 +66,6 @@ I spent 3 hours on calculations. I spent 20 minutes on the multiview sketches. I
 
 ---
 
-Disclaimer regarding AI Usage
+**Disclaimer regarding AI Usage**
 
 AI was used in the formatting and organization of this assignment. All handwritten calculations and diagrams were created without AI. Grammar fixes and sentence structure was done with the assistance of Grammarly.
