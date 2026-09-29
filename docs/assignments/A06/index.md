@@ -105,6 +105,7 @@ The total time spent on the assignment was approximately 3 hours.
 ## CAD Download
 
 [Download Bracket OnShape File and Drawing](https://drive.google.com/drive/folders/1vx22M3warD9f-V7tWdSivsqSOmH_vnAy?usp=sharing)
+
 [View Onshape Part](https://cad.onshape.com/documents/c7fb525f3044bad3a86923b3/w/4980922cf18a1775be701a4f/e/ca9c0c25a5aa52cdaa822ca6?renderMode=0&uiState=6abb38b5139db12ef3047496)
 
 ---
