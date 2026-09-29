@@ -28,7 +28,7 @@ The upper portion of the cavity was removed to create the T-shaped sliding inter
 
 Feature B was added underneath the housing as the connection between the main bracket and Feature A. Its dimensions were tied to the variables from the previous analysis so that changes to the controlling dimensions could propagate through the model.
 
-![Feature B support](Bracket5(1).PNG)
+![Feature B support](Bracket5.PNG)
 
 Feature A was then created as the cylindrical support for the polyester strap. Its center location was based on the distance used during the Feature B analysis, while its diameter was controlled by the strength equation used in the previous assignment.
 
