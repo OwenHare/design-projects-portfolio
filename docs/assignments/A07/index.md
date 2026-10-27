@@ -211,4 +211,8 @@ I spent approximately **2.5 Hours** completing the FEA simulations, modifying th
 # CAD Download
 
 [Download Bracket CAD File](https://cad.onshape.com/documents/c7fb525f3044bad3a86923b3/w/4980922cf18a1775be701a4f/e/341c2ebdf7423bd5064df323?renderMode=10&rightPanel=simulationPanel&uiState=6ae0384b0b64e8221b97fec8)
+
+## Sources and AI Policy
+
+*Open AI's ChatGPT was used in the making of this for formatting, and organizational purposes. All models, handwritten equations, and text has been handwritten by myself without the use of AI. Research of terminology was used through Google. Grammatical structure was completed with the assistance of Grammarly.*
 ```
