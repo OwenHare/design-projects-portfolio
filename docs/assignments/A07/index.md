@@ -1,4 +1,4 @@
-```markdown
+
 # Bracket FEA
 
 ## Objective
@@ -215,4 +215,4 @@ I spent approximately **2.5 Hours** completing the FEA simulations, modifying th
 ## Sources and AI Policy
 
 *Open AI's ChatGPT was used in the making of this for formatting, and organizational purposes. All models, handwritten equations, and text has been handwritten by myself without the use of AI. Research of terminology was used through Google. Grammatical structure was completed with the assistance of Grammarly.*
-```
+
