@@ -66,7 +66,7 @@ $$
 
 The shaft is represented as a simply supported beam with the gear centered between its bearing reaction points. The free-body diagram applies to either shaft under the simplified loading arrangement.
 
-![Shaft free-body diagram showing bearing span and gear forces](Gearbox1.png)
+![Shaft free-body diagram showing bearing span and gear forces](Gearbox1.PNG)
 
 *Figure 1. Free-body diagram with the 0.690 in bearing center span and gear mesh loading.*
 
@@ -164,7 +164,7 @@ The modeled bearings are **graphite-lubricated SAE 841 bronze**, rather than oil
 | Bearings per shaft | 2 | 2 |
 | Approximate load per bearing | 1.330 lbf | 1.330 lbf |
 
-![Bearing free-body diagram showing reaction per sleeve](gearbox2.png)
+![Bearing free-body diagram showing reaction per sleeve](gearbox2.PNG)
 
 *Figure 2. Each sleeve carries approximately 1.330 lbf under the centered gear-load assumption.*
 
