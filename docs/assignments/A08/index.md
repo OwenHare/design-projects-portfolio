@@ -521,4 +521,4 @@ of shaft protrusion if centered. An external coupling would therefore need longe
 
 ## 9. Conclusion
 
-I spent around 8 hours working on this assignment over the course of 3 days. 3 Hours were spent designing the CAD models while the other 5 had been spent through documentation and revisions. You can download the folder to access the parts and assemblies [here](https://drive.google.com/drive/folders/1oqGdbSh4yhDBONOkbHgVbcroTp35oyNG?usp=sharing) through OnShape. 
+I spent around 8 hours working on this assignment over the course of 3 days. 3 Hours were spent designing the CAD models while the other 5 had been spent through documentation and revisions. You can download the folder to access the parts and assemblies [here](https://drive.google.com/drive/folders/1oqGdbSh4yhDBONOkbHgVbcroTp35oyNG?usp=sharing) through OnShape.
