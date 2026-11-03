@@ -1,589 +1,524 @@
 
 # MEGR 2156 – Gearbox Design and Shaft Analysis
 
-> **Portfolio Documentation Disclaimer:** External engineering tools, Onshape CAD software, and AI-assisted formatting were used in preparing this documentation. All engineering calculations were performed by hand. AI was used extensively to restructure, format, and improve the presentation of this assignment. This project is intended to become a featured piece of my mechanical engineering portfolio, which is why additional attention was given to its organization and visual presentation.
+> **Portfolio Documentation Disclaimer:** I used external engineering tools, Onshape, and extensive AI-assisted formatting to organize and present this assignment. All original engineering calculations were performed by hand. AI was used to restructure the writing, organize tables and equations, and improve documentation quality; it was not used as a replacement for my engineering work. I intend to feature this gearbox as a staple project in my portfolio, hence the quality of structuring.
+
+**Course:** MEGR 2156 – Design Projects Lab I  
+**Project:** Gearbox Design  
+**CAD Platform:** Onshape  
+**Design Record Updated:** November 3, 2026
+
+The final two-piece housing was reconstructed with native Onshape features. The previously imported assembly remains useful for illustrating the gearbox concept, but its STEP components do not preserve native feature history. The modeled graphite-lubricated sleeve bearings still require confirmation of their operating limits at the specified shaft speeds.
 
 ---
 
-## 1. Project Overview
+## 1. Requirements and Design Parameters
 
-The objective of this assignment was to design a gearbox that can be assembled and disassembled while analyzing the mechanical requirements of its shafts and bearings.
+The gearbox was designed around an 18-tooth input pinion and a 48-tooth output gear. The required reduction is **24:9**, which is equivalent to the selected tooth ratio of **48:18**.
 
-The project involved developing a parametric gearbox housing in Onshape, establishing shaft and gear locations, evaluating bearing reactions, and documenting the resulting assembly.
+| Parameter | Input Shaft / Pinion | Output Shaft / Gear |
+|---|---|---|
+| Gear part number | McMaster 7880K19 | McMaster 7880K24 |
+| Number of teeth | 18 | 48 |
+| Diametral pitch | 48 | 48 |
+| Pressure angle | 20° | 20° |
+| Pitch diameter | 0.375 in | 1.000 in |
+| Outside diameter | 0.420 in | 1.040 in |
+| Shaft diameter × length | 0.125 × 1.000 in | 0.250 × 1.000 in |
+| Rotational speed | 2,933.33 rpm | 1,100 rpm |
+| Transmitted torque | 0.46875 in·lbf | 1.25 in·lbf |
 
-### Project Objectives
+### Gear Ratio and Center Distance
 
-- Design a gearbox capable of assembly and disassembly.
-- Develop a two-piece gearbox housing.
-- Establish shaft and gear locations.
-- Analyze shaft loading and bearing reactions.
-- Evaluate suitable sleeve bearings.
-- Incorporate fastening and mounting features.
-- Produce parametric CAD models and assembly documentation.
+The tooth ratio is:
 
-### Design Tools
+$$
+\frac{N_{out}}{N_{in}}=\frac{48}{18}=\frac{24}{9}=2.6667
+$$
 
-| Tool | Application |
-|---|---|
-| Onshape | Parametric CAD modeling |
-| Engineering mechanics | Shaft and bearing analysis |
-| Hand calculations | Strength and loading calculations |
-| Engineering drawings | Dimensional documentation |
-| GitHub | Portfolio documentation |
+Assuming ideal power transmission:
 
----
+$$
+n_{in}=1100\left(\frac{48}{18}\right)=\boxed{2933.33\ \text{rpm}}
+$$
 
-## 2. Gearbox Housing Design
+$$
+T_{in}=1.25\left(\frac{18}{48}\right)=\boxed{0.46875\ \text{in·lbf}}
+$$
 
-### 2.1 Housing Configuration
+The gear shaft center distance is calculated using the two pitch diameters:
 
-The gearbox was designed using a two-piece rectangular housing consisting of a removable upper section and a lower support structure.
-
-The lower housing provides an internal cavity for the gears and shaft components. The upper housing encloses the assembly while allowing access for maintenance and disassembly.
-
-### Housing Features
-
-| Feature | Description |
-|---|---|
-| Configuration | Two-piece rectangular enclosure |
-| Upper housing | Removable cover |
-| Lower housing | Gear and shaft support |
-| Internal cavity | Rectangular recessed pocket |
-| Shaft openings | Two circular openings |
-| Fastening locations | Four corner mounting holes |
-| Bearing support | Sleeve bearing locations |
-
-### 2.2 Internal Cavity
-
-The internal cavity was created using a rectangular sketch followed by an extruded material removal.
-
-| Parameter | Dimension |
-|---|---:|
-| Cavity length | 0.051 m |
-| Cavity width | 0.031 m |
-| Cavity length | 51 mm |
-| Cavity width | 31 mm |
-
-![Internal cavity sketch](Gearbox6.png)
-
-*Figure 1. Internal gearbox cavity sketch showing dimensional constraints.*
-
-### 2.3 Shaft Openings
-
-Two circular openings were incorporated into the housing to accommodate the shaft and bearing arrangements.
-
-| Opening | Diameter |
-|---|---:|
-| Opening 1 | 6 mm |
-| Opening 2 | 10 mm |
-
-![Shaft opening sketch](Gearbox10.png)
-
-*Figure 2. Shaft opening geometry and dimensional constraints.*
-
-### 2.4 Mounting Features
-
-Four mounting holes were positioned near the housing corners to accommodate fastening hardware.
-
-The mounting geometry was created using sketch, extrusion, and mirror operations.
-
-| Parameter | Value |
-|---|---|
-| Number of holes | 4 |
-| Hole diameter | 3 mm |
-| Arrangement | Four corners |
-| CAD operations | Sketch, Extrude, Mirror |
-
-![Mounting hole sketch](Gearbox7.png)
-
-*Figure 3. Mounting hole locations and dimensional constraints.*
+$$
+C=\frac{D_{p,in}+D_{p,out}}{2}
+=\frac{0.375+1.000}{2}
+=\boxed{0.6875\ \text{in}}
+$$
 
 ---
 
-## 3. Parametric CAD Development
+## 2. Design I – Shaft Strength
 
-### 3.1 Lower Housing
+### Known Values, Unknowns, and Shaft Free-Body Diagram
 
-The lower housing was modeled using a rectangular base, recessed cavity, shaft openings, and mounting features.
+**Known:** Specified shaft sizes, shaft speeds, transmitted torques, a 20° gear pressure angle, and two bearing supports per shaft.
 
-![Lower gearbox housing](Gearbox3.png)
+**To determine:** Gear tooth forces, support reactions, bending moment, bending stress, torsional stress, combined equivalent stress, and preliminary shaft material adequacy.
 
-*Figure 4. Lower housing with internal cavity, shaft openings, and fastening holes.*
+The shaft is represented as a simply supported beam with the gear centered between its bearing reaction points. The free-body diagram applies to either shaft under the simplified loading arrangement.
 
-### 3.2 Upper Housing
+![Shaft free-body diagram showing bearing span and gear forces](Gearbox1.png)
 
-The upper housing was modeled as a removable cover corresponding to the lower housing geometry.
+*Figure 1. Free-body diagram with the 0.690 in bearing center span and gear mesh loading.*
 
-![Upper and lower housing](Gearbox8.png)
+### Gear Forces and Bearing Reactions
 
-*Figure 5. Upper and lower housing components.*
+The output gear has a pitch diameter of 1.000 in and transmits 1.25 in·lbf of torque. Its tangential tooth force is:
 
-### 3.3 Completed Housing
+$$
+F_t=\frac{2T_{out}}{D_{p,out}}
+=\frac{2(1.25)}{1.000}
+=\boxed{2.50\ \text{lbf}}
+$$
 
-Both housing sections were positioned together to evaluate alignment and the completed enclosure geometry.
+The radial gear force follows from the pressure angle:
 
-![Completed housing](Gearbox9.png)
+$$
+F_r=F_t\tan(20^\circ)
+=2.50\tan(20^\circ)
+=\boxed{0.910\ \text{lbf}}
+$$
 
-*Figure 6. Completed two-piece gearbox housing.*
+The combined transverse force magnitude is:
 
-### CAD Feature Summary
+$$
+F=\sqrt{F_t^2+F_r^2}
+=\sqrt{2.50^2+0.910^2}
+=\boxed{2.661\ \text{lbf}}
+$$
 
-| Feature | Modeling Method |
-|---|---|
-| Housing base | Sketch and Extrude |
-| Internal cavity | Extrude Remove |
-| Shaft openings | Circular sketch and Extrude |
-| Mounting holes | Circular sketch and Extrude |
-| Repeated features | Mirror |
-| Upper housing | Corresponding cover geometry |
-| Completed housing | Two-piece enclosure |
+For a centrally applied load, static equilibrium gives equal bearing reactions:
 
----
+$$
+\sum F=0,\qquad R_1+R_2=F
+$$
 
-## 4. Shaft Loading Analysis
+$$
+\sum M_{R_1}=0,\qquad R_2L-F\left(\frac L2\right)=0
+$$
 
-### 4.1 Shaft Loading Conditions
+$$
+R_1=R_2=\frac F2=\boxed{1.330\ \text{lbf}}
+$$
 
-The shaft was modeled as a simply supported beam with the gear positioned between two bearing supports.
+With a bearing center span of $L=0.690$ in, the maximum bending moment is:
 
-The gear transmits tangential and radial forces that produce bending loads on the shaft.
-
-The analysis considers:
-
-- Tangential gear force, Ft
-- Radial gear force, Fr
-- Bearing reaction R1
-- Bearing reaction R2
-- Bearing center span L
-
-### 4.2 Free-Body Diagram
-
-![Shaft free body diagram](gearbox2.PNG)
-
-*Figure 7. Shaft free-body diagram showing the bearing reactions and gear loading.*
-
-### 4.3 Bearing Reactions
-
-For a centered transverse load, the two bearing reactions are equal.
-
-Static equilibrium requires:
-
-\[
-\sum F_y = 0
-\]
-
-\[
-R_1 + R_2 = F
-\]
-
-Taking moments about the first support:
-
-\[
-\sum M_1 = 0
-\]
-
-\[
-R_2L-F\left(\frac{L}{2}\right)=0
-\]
-
-Therefore:
-
-\[
-R_2=\frac{F}{2}
-\]
-
-\[
-R_1=\frac{F}{2}
-\]
-
-The calculated bearing reaction is:
-
-\[
-R_1=R_2=1.330\text{ lbf}
-\]
-
-The corresponding total transverse load is:
-
-\[
-F=2(1.330)
-\]
-
-\[
-\boxed{F=2.660\text{ lbf}}
-\]
-
-Converting to SI units:
-
-\[
-F=2.660(4.44822)
-\]
-
-\[
-\boxed{F=11.83\text{ N}}
-\]
-
-The load is assumed to act centrally between the two supports. Tangential and radial gear forces must be resolved in their respective planes when calculating the combined shaft loading.
-
-### 4.4 Bearing Center Span
-
-![Bearing center span](Gearbox1.PNG)
-
-*Figure 8. Bearing center span used for shaft bending analysis.*
-
-The bearing center span is:
-
-\[
-L=0.690\text{ in}
-\]
-
-Converting to millimeters:
-
-\[
-L=0.690(25.4)
-\]
-
-\[
-\boxed{L=17.526\text{ mm}}
-\]
-
-### 4.5 Maximum Bending Moment
-
-For a simply supported beam with a centered transverse load:
-
-\[
+$$
 M_{max}=\frac{FL}{4}
-\]
+=\frac{(2.661)(0.690)}4
+=\boxed{0.459\ \text{in·lbf}}
+$$
 
-Substituting the calculated values:
+The assignment permits neglecting the moment associated with the radial tooth force. Retaining the radial-force contribution in this preliminary resultant-force calculation provides a conservative comparison, provided the force components are resolved consistently.
 
-\[
-M_{max}=\frac{(2.660)(0.690)}{4}
-\]
+### Shaft Stress Equations
 
-\[
-\boxed{M_{max}=0.4589\text{ lbf}\cdot\text{in}}
-\]
+For a solid circular shaft, the nominal bending and torsional stresses are:
 
-Converting to SI units:
-
-\[
-M_{max}=0.4589(0.112985)
-\]
-
-\[
-\boxed{M_{max}=0.05185\text{ N}\cdot\text{m}}
-\]
-
-### Shaft Loading Results
-
-| Parameter | Result |
-|---|---:|
-| Bearing center span | 0.690 in |
-| Bearing center span | 17.526 mm |
-| Reaction R1 | 1.330 lbf |
-| Reaction R2 | 1.330 lbf |
-| Total transverse load | 2.660 lbf |
-| Total transverse load | 11.83 N |
-| Maximum bending moment | 0.4589 lbf·in |
-| Maximum bending moment | 0.05185 N·m |
-
----
-
-## 5. Shaft Strength Evaluation
-
-### 5.1 Bending Stress
-
-The shaft must resist bending produced by the transverse gear loading.
-
-For a solid circular shaft:
-
-\[
+$$
 \sigma_b=\frac{32M}{\pi d^3}
-\]
+$$
 
-Where:
-
-- M = Maximum bending moment
-- d = Shaft diameter
-
-Using the calculated bending moment:
-
-\[
-\sigma_b=\frac{32(51.85)}{\pi d^3}
-\]
-
-For this expression, M is in N·mm and d is in mm, producing stress in MPa.
-
-### 5.2 Torsional Shear Stress
-
-The shaft also experiences torsional loading from power transmission.
-
-The nominal torsional shear stress is:
-
-\[
+$$
 \tau=\frac{16T}{\pi d^3}
-\]
+$$
 
-Where:
+Combined bending and torsion are screened using von Mises equivalent stress:
 
-- T = Transmitted torque
-- d = Shaft diameter
-
-### 5.3 Combined Stress
-
-For combined bending and torsion, the von Mises equivalent stress is:
-
-\[
+$$
 \sigma_{VM}=\sqrt{\sigma_b^2+3\tau^2}
-\]
+$$
 
-The static yield factor of safety is:
-
-\[
-n=\frac{S_y}{\sigma_{VM}}
-\]
-
-Where Sy represents the material yield strength.
-
-### Shaft Strength Summary
-
-| Parameter | Method |
-|---|---|
-| Bending moment | Static equilibrium |
-| Bending stress | Flexure equation |
-| Torsional stress | Circular shaft torsion equation |
-| Equivalent stress | von Mises criterion |
-| Factor of safety | Yield strength / equivalent stress |
-
-The final numerical factor of safety requires the shaft material, transmitted torque, and critical shaft diameter.
-
----
-
-## 6. Sleeve Bearing Selection
-
-### 6.1 Bearing Requirements
-
-Sleeve bearings were considered for supporting the gearbox shafts.
-
-The bearings must provide sufficient radial support while maintaining acceptable friction, wear, and dimensional compatibility.
-
-The calculated radial reaction used for preliminary bearing evaluation is:
-
-\[
-R=1.330\text{ lbf}=5.92\text{ N}
-\]
-
-### 6.2 Bearing Pressure
-
-Projected bearing pressure is calculated using:
-
-\[
-P=\frac{F}{dL_b}
-\]
-
-Where:
-
-- P = Bearing pressure
-- F = Radial bearing load
-- d = Shaft diameter
-- Lb = Bearing length
-
-Using the calculated bearing reaction:
-
-\[
-P=\frac{5.92}{dL_b}
-\]
-
-With d and Lb in millimeters, P is expressed in MPa.
-
-### 6.3 Candidate Shaft Diameters
-
-For a 6 mm shaft:
-
-\[
-P_6=\frac{5.92}{6L_b}
-\]
-
-\[
-\boxed{P_6=\frac{0.987}{L_b}\text{ MPa}}
-\]
-
-For a 10 mm shaft:
-
-\[
-P_{10}=\frac{5.92}{10L_b}
-\]
-
-\[
-\boxed{P_{10}=\frac{0.592}{L_b}\text{ MPa}}
-\]
-
-In these expressions, Lb is entered numerically in millimeters.
-
-### 6.4 Preliminary Bearing Pressure Comparison
-
-The following table compares hypothetical bearing lengths under the same radial loading.
-
-| Bearing Length | 6 mm Shaft | 10 mm Shaft |
+| Stress Check | Input Shaft (0.125 in) | Output Shaft (0.250 in) |
 |---|---:|---:|
-| 5 mm | 0.197 MPa | 0.118 MPa |
-| 8 mm | 0.123 MPa | 0.074 MPa |
-| 10 mm | 0.099 MPa | 0.059 MPa |
-| 12 mm | 0.082 MPa | 0.049 MPa |
+| Nominal bending stress | 2,394 psi | 299 psi |
+| Nominal torsional shear | 1,222 psi | 407 psi |
+| Combined von Mises stress | 3,195 psi | 766 psi |
 
-These values represent calculated projected pressures rather than verified manufacturer bearing ratings.
-
-### 6.5 Pressure-Velocity Considerations
-
-Bearing suitability also depends on rotational speed.
-
-The pressure-velocity relationship is:
-
-\[
-PV=P\cdot V
-\]
-
-For a rotating shaft:
-
-\[
-V=\frac{\pi dN}{60}
-\]
-
-Where:
-
-- V = Shaft surface velocity in m/s
-- d = Shaft diameter in meters
-- N = Rotational speed in rpm
-
-The resulting PV value must remain within the manufacturer's allowable operating range.
-
-### Bearing Selection Summary
-
-| Requirement | Evaluation |
-|---|---|
-| Bearing type | Sleeve bearing |
-| Radial load | 5.92 N |
-| Candidate shaft diameters | 6 mm and 10 mm |
-| Bearing pressure | Calculated from projected area |
-| Bearing length | Dependent on selected bearing |
-| Operating speed | Required for PV evaluation |
-| Material | Requires manufacturer specification |
-| Housing compatibility | Requires dimensional verification |
-
-The bearing dimensions and material must be verified against the available components before final selection.
+**Preliminary material screening:** A 1018 steel shaft was assumed with an allowable equivalent stress of 10,000 psi. Both specified diameters fall below that assumed allowable under the modeled static loads. This is not a final fatigue or manufacturing verification; actual shaft stock, strength, gear press fits, stress concentrations, and service conditions still need confirmation.
 
 ---
 
-## 7. Gearbox Assembly
+## 3. Design II – Journal Bearing Selection and PV
 
-### 7.1 Completed Assembly
+### Selected Sleeve Bearings
 
-The gearbox assembly incorporates the housing, gears, shaft support components, and fastening hardware.
+The modeled bearings are **graphite-lubricated SAE 841 bronze**, rather than oil-impregnated sleeves. Each shaft is supported by two bearings.
 
-![Completed gearbox assembly](Gearbox4.png)
+| Parameter | Input Sleeve | Output Sleeve |
+|---|---|---|
+| McMaster part number | 9368T96 | 9368T13 |
+| Nominal shaft diameter / ID | 0.125 in | 0.250 in |
+| Nominal bearing OD | 0.250 in | 0.375 in |
+| Bearing length | 0.250 in | 0.250 in |
+| Sleeve material | Graphite-lubricated SAE 841 bronze | Graphite-lubricated SAE 841 bronze |
+| Bearings per shaft | 2 | 2 |
+| Approximate load per bearing | 1.330 lbf | 1.330 lbf |
 
-*Figure 9. Complete gearbox assembly showing the housing, bearing locations, and fastening hardware.*
+![Bearing free-body diagram showing reaction per sleeve](gearbox2.png)
 
-### 7.2 Internal Gear Arrangement
+*Figure 2. Each sleeve carries approximately 1.330 lbf under the centered gear-load assumption.*
 
-The upper housing was removed from the CAD view to inspect the internal gear arrangement and component positioning.
+### Bearing Pressure and Surface Speed
 
-![Internal gearbox assembly](Gearbox5.png)
+Projected bearing area is the shaft diameter multiplied by bearing length. Average projected pressure is:
 
-*Figure 10. Gearbox assembly with the upper housing removed.*
+$$
+P=\frac{R}{dL_b}
+$$
 
-### 7.3 Assembly Procedure
+The journal surface speed, with $d$ in inches and $N$ in rpm, is:
 
-The general assembly procedure is:
+$$
+V=\frac{\pi dN}{12}\qquad [\text{ft/min}]
+$$
 
-1. Prepare the lower gearbox housing.
-2. Install the selected bearing components.
-3. Position the shafts and gears.
-4. Verify internal alignment and clearances.
-5. Position the upper housing.
-6. Install the fastening hardware.
-7. Verify the intended shaft rotation and component clearances.
+The pressure-velocity index is:
 
-Disassembly follows the reverse procedure.
+$$
+PV=P\,V
+$$
 
-### Assembly Evaluation
+For the **input sleeve**:
 
-| Requirement | Design Feature |
-|---|---|
-| Gear enclosure | Two-piece housing |
-| Internal access | Removable upper housing |
-| Shaft support | Sleeve bearings |
-| Gear clearance | Recessed internal cavity |
-| Housing fastening | Four corner mounting locations |
-| CAD representation | Complete assembly model |
+$$
+P_{in}=\frac{1.330}{(0.125)(0.250)}\approx\boxed{42.6\ \text{psi}}
+$$
+
+$$
+V_{in}=\frac{\pi(0.125)(2933.33)}{12}\approx\boxed{96.0\ \text{ft/min}}
+$$
+
+For the **output sleeve**:
+
+$$
+P_{out}=\frac{1.330}{(0.250)(0.250)}\approx\boxed{21.3\ \text{psi}}
+$$
+
+$$
+V_{out}=\frac{\pi(0.250)(1100)}{12}\approx\boxed{72.0\ \text{ft/min}}
+$$
+
+| Bearing Result | Input Sleeve | Output Sleeve |
+|---|---:|---:|
+| Nominal ID × OD × length | 0.125 × 0.250 × 0.250 in | 0.250 × 0.375 × 0.250 in |
+| Projected pressure, $P$ | 42.6 psi | 21.3 psi |
+| Surface velocity, $V$ | 96.0 ft/min | 72.0 ft/min |
+| Pressure-velocity, $PV$ | 4,086 psi·ft/min | 1,532 psi·ft/min |
+
+McMaster provides load figures of **50 lb at 120 rpm** for 9368T96 and **100 lb at 120 rpm** for 9368T13 in the catalog information reviewed for this project. Those figures cannot be directly extended to operating speeds of approximately 2,933 rpm and 1,100 rpm. The calculated values are compared with a documented same-size alternative in Section 6, but that comparison is not a certification of the modeled graphite sleeves.
 
 ---
 
-## 8. Design Results
+## 4. Design III – Sleeve Wall Thickness
 
-The completed CAD design incorporates a removable housing, shaft openings, bearing support locations, gear components, and fastening features.
+The sleeve wall thickness can be determined directly from its inside and outside diameters.
 
-The analytical portion establishes preliminary bearing reactions and shaft bending loads.
+**Known:** Bearing ID and OD from the selected component dimensions.  
+**Unknown:** Wall thickness and a preliminary estimate of bearing wall stress.
 
-### Final Results Summary
+$$
+t=\frac{OD-ID}{2}
+$$
 
-| Category | Result |
+For the input sleeve:
+
+$$
+t_{in}=\frac{0.250-0.125}{2}=\boxed{0.0625\ \text{in}}
+$$
+
+For the output sleeve:
+
+$$
+t_{out}=\frac{0.375-0.250}{2}=\boxed{0.0625\ \text{in}}
+$$
+
+A simplified hoop-stress screening expression is:
+
+$$
+\sigma_h\approx\frac{Pr_i}{t}
+$$
+
+Using the previously calculated projected pressures:
+
+$$
+\sigma_{h,in}\approx\frac{(42.6)(0.0625)}{0.0625}=\boxed{42.6\ \text{psi}}
+$$
+
+$$
+\sigma_{h,out}\approx\frac{(21.3)(0.125)}{0.0625}=\boxed{42.6\ \text{psi}}
+$$
+
+| Sleeve Property | Input | Output |
+|---|---:|---:|
+| Nominal ID | 0.125 in | 0.250 in |
+| Nominal OD | 0.250 in | 0.375 in |
+| Calculated wall thickness | 0.0625 in | 0.0625 in |
+| Approximate hoop-stress screen | 42.6 psi | 42.6 psi |
+
+**Limitation:** This is a simple uniform-pressure screening estimate. A real journal bearing has a nonuniform contact-pressure distribution and is affected by its press fit, installed bore, alignment, and lubrication. Supplier dimensions and required running clearance govern the final design.
+
+---
+
+## 5. Design IV – Two-Piece Housing Concept
+
+### Housing Configuration and Materials
+
+The enclosure was developed as two axial housing halves meeting at the gear midplane. Both halves have internal clearance for the gear arrangement and openings for sleeve bearing support. Four corresponding corner holes allow the housing to be secured with removable fasteners.
+
+The native Onshape model contains the two editable housing components. An earlier imported assembly includes simplified M3 bolts and external nuts. Removing the fasteners is intended to permit separation of the upper housing and removal of the internal gear, shaft, and bearing components.
+
+| Component | Preliminary Material / Specification |
 |---|---|
-| CAD software | Onshape |
-| Housing configuration | Two-piece |
-| Internal cavity | 51 mm × 31 mm |
-| Shaft openings | 6 mm and 10 mm |
-| Mounting hole diameter | 3 mm |
-| Mounting locations | 4 |
-| Bearing center span | 17.526 mm |
-| Bearing reaction | 5.92 N per bearing |
-| Total transverse load | 11.83 N |
-| Maximum bending moment | 0.05185 N·m |
-| Bearing type | Sleeve bearing |
-| Assembly configuration | Removable upper housing |
+| Upper and lower housing | 6061-T6 aluminum |
+| Input and output shafts | 1018 steel |
+| Sleeve bearings | SAE 841 bronze |
+| Gear pair | Supplied brass gears |
+| Fasteners | Steel M3 bolts and nuts |
 
-### Engineering Observations
+### Housing Design Dimensions
 
-The parametric modeling process allows modifications to the housing dimensions, shaft locations, and mounting geometry without requiring complete reconstruction.
+| Feature | Dimension / Specification |
+|---|---|
+| Gear shaft center distance | 0.6875 in |
+| Native outer body | 2.50 × 1.90 × 0.94 in |
+| Native internal cavity | 2.00 × 1.24 × 0.44 in |
+| Minimum nominal in-plane gear clearance | 0.10 in along cavity width |
+| Largest gear axial end clearance | 0.0325 in per side |
+| Corner fastening locations | Four aligned clearance holes |
+| Corner hole diameter target | 0.128 in |
 
-The two-piece enclosure provides access to internal mechanical components and supports the assignment requirement for assembly and disassembly.
+### Intended Assembly Sequence
 
-The shaft analysis establishes preliminary loading conditions for evaluating shaft strength and selecting bearings.
+1. Prepare the lower housing and fit the lower sleeve bearings.
+2. Install the shaft-and-gear press-fit subassemblies.
+3. Fit the upper bearing sleeves and position the upper housing.
+4. Align the four corner fastener locations.
+5. Secure the housing using bolts and nuts.
+6. Confirm that the shafts rotate freely and that no internal components interfere.
 
-Further verification is required for the final shaft factor of safety, bearing specifications, dimensional tolerances, and physical operation.
+Disassembly follows the reverse sequence. This describes the intended serviceability of the design; a fully mated, motion-tested assembly is still required to confirm that the physical sequence works as intended.
+
+---
+
+## 6. Bearing Speed, PV, and Running-Fit Verification
+
+### Purpose of the Checks
+
+Projected pressure ($P$) represents bearing load divided by the journal's projected area. Surface speed ($V$) represents the journal's motion relative to the bearing. The product ($PV$) provides a preliminary indication of frictional heating demand.
+
+Bearing selection requires separate verification of the supplier's **pressure, velocity, and PV limits**. It also requires distinguishing two different fits:
+
+- **Housing fit:** The bearing outside diameter is retained by an interference/press fit in the housing bore.
+- **Running fit:** The installed sleeve inside diameter must leave sufficient clearance for the rotating journal.
+
+The modeled McMaster bearings produce the following duty points:
+
+| Verification Quantity | Input | Output |
+|---|---:|---:|
+| Projected pressure | 42.6 psi | 21.3 psi |
+| Surface speed | 96.0 ft/min | 72.0 ft/min |
+| PV | 4,086 psi·ft/min | 1,532 psi·ft/min |
+
+The catalog load ratings quoted for the graphite-lubricated McMaster sleeves were specified at 120 rpm. Their approval at the actual design speeds and their installed bore clearances are **not yet verified**.
+
+### Documented Same-Size Alternative: Oilite Bearings
+
+A same-size oil-impregnated SAE 841 bronze alternative was documented using the following Oilite bearing designations:
+
+- **Input:** Oilite AA227-02, nominal 1/8 × 1/4 × 1/4 in.
+- **Output:** Oilite AA307-, nominal 1/4 × 3/8 × 1/4 in.
+
+The supplier sheets referenced in the project PDF list the following maximum operating values for these alternatives:
+
+| Limit | Published Maximum |
+|---|---:|
+| Pressure, $P$ | 2,000 psi |
+| Velocity, $V$ | 1,200 ft/min |
+| PV | 50,000 psi·ft/min |
+
+The calculated duty points are below the published limits:
+
+| Utilization of Limit | Input Bearing | Output Bearing |
+|---|---:|---:|
+| Pressure limit | 2.1% | 1.1% |
+| Velocity limit | 8.0% | 6.0% |
+| PV limit | 8.2% | 3.1% |
+
+These comparisons establish preliminary catalog screening only. Temperature, alignment, lubrication, installation, loading distribution, and duty cycle must still be evaluated.
+
+### Bearing Fits and Machining Requirements
+
+| Fit Feature | Input: Oilite AA227-02 | Output: Oilite AA307- |
+|---|---|---|
+| Free bearing ID | 0.126–0.127 in | 0.251–0.252 in |
+| Bearing OD | 0.252–0.253 in | 0.376–0.377 in |
+| Recommended housing bore | 0.25082 ± 0.00050 in | 0.37474 ± 0.00050 in |
+| Recommended shaft journal | 0.12303 ± 0.00020 in | 0.24789 ± 0.00020 in |
+| Nominal radial support load | 1.330 lbf | 1.330 lbf |
+
+Based on these dimensions, the approximate diametral press interference before elastic deformation is:
+
+| Seat | Minimum Interference | Maximum Interference |
+|---|---:|---:|
+| Input bearing | 0.00068 in | 0.00268 in |
+| Output bearing | 0.00076 in | 0.00276 in |
+
+Pressing a porous bronze sleeve into a housing can reduce its internal bore diameter. The installed bore must therefore be checked before assuming that the shaft will rotate freely. A separate sintered-bronze design guide cited in the PDF recommends a minimum running clearance of approximately 0.0005 in for shafts under 0.760 in; this is a preliminary target, not a substitute for the selected supplier's installation instructions.
+
+The Oilite journal specifications are smaller than the assignment's nominal 0.125 in and 0.250 in shafts. An alternative build would retain the required nominal shaft sizes at the gear press-fit locations while machining the journal sections to the supplier's dimensions.
+
+At the minimum specified journal sizes of **0.12283 in** and **0.24769 in**, the preliminary combined equivalent shaft stresses increase to approximately **3,368 psi** and **788 psi**, respectively. Both remain below the assumed 10,000 psi screening allowable. The current straight-shaft CAD and nominal housing bores would require revision before this alternative could be described as physically assembled.
+
+---
+
+## 7. Design V – CAD Development and Pictures
+
+### CAD Development Approach
+
+The supplied 18-tooth and 48-tooth gear models were imported as STEP geometry. An initial Python/build123d model was used to create the shafts, sleeves, two housing sections, and simplified hardware as STEP parts. This version remains as an assembly concept in **Assembly 1**.
+
+Because imported STEP geometry does not expose native Onshape sketch and extrusion history, the two-piece housing was later rebuilt in the **Parametric housing Part Studio**. The final native model uses sketches, extruded additions and removals, and a mirror operation. Both housing parts can be selected and edited independently.
+
+The earlier imported assembly has no assembly mates and does not update automatically when the native housing Part Studio is edited. The two should therefore be treated as separate design iterations.
+
+### Native Onshape Feature Summary
+
+| Native Feature | Design Purpose |
+|---|---|
+| Sketch 1 / Extrude 1 | Centered 2.50 × 1.90 in base, extruded 0.47 in below the split plane |
+| Sketch 2 / Extrude 2 | Centered 2.00 × 1.24 in pocket, cut 0.22 in into the lower half |
+| Sketch 3 / Extrude 3 | Bearing seats at $x=\pm0.34375$ in, with nominal 0.250 and 0.375 in seat diameters |
+| Sketch 4 / Extrude 4 | Four corner fastener profiles, cut through all |
+| Mirror 1 | Upper housing created as a separate part mirrored about the Top split plane |
+
+### Native Housing Screenshots
+
+**Cavity dimensions**
+
+![Dimensioned native housing cavity sketch](Gearbox6.png)
+
+*CAD Figure 1. Dimensioned internal cavity sketch on the lower housing.*
+
+**Bearing seat positions**
+
+![Bearing seat sketch with gear shaft locations](Gearbox3.png)
+
+*CAD Figure 2. Bearing-seat sketch showing the shaft positions and nominal sleeve housing diameters. The displayed sketch units may round the dimensions in meters.*
+
+**Corner fastener locations**
+
+![Corner fastener hole sketch](Gearbox7.png)
+
+*CAD Figure 3. Four corner fastener profiles before the final through cut. An initially oversized profile was corrected to the target hole diameter.*
+
+**Finished lower housing**
+
+![Finished lower gearbox housing](Gearbox4.png)
+
+*CAD Figure 4. Finished native lower housing showing the recessed pocket, bearing seats, and mounting holes.*
+
+**Completed two-part native housing**
+
+![Two-part native housing and feature tree](Gearbox8.png)
+
+*CAD Figure 5. Two housing parts and their editable native Onshape feature tree.*
+
+**Additional native housing capture**
+
+![Additional completed housing CAD capture](Gearbox5.png)
+
+*Supplementary CAD view. A second capture of the completed native housing, retained with the project image set.*
+
+### Earlier Imported Gearbox Assembly
+
+**Closed assembly concept**
+
+![Complete imported gearbox assembly](Gearbox9.png)
+
+*CAD Figure 6. Earlier imported assembly concept with the upper and lower housing sections, shafts, sleeve locations, and simplified fastening hardware.*
+
+**Internal gear arrangement**
+
+![Imported gearbox with top housing hidden](Gearbox10.png)
+
+*CAD Figure 7. Imported assembly with the upper housing hidden to expose the gear, shaft, and bearing arrangement.*
+
+The imported assembly views demonstrate the intended component arrangement. They are not evidence of native feature history or a validated kinematic assembly.
+
+---
+
+## 8. Checks, Mistakes, and Lessons Learned
+
+### Gear and Housing Clearance Checks
+
+For the 1.040 in outside-diameter output gear and the 1.24 in cavity width, nominal lateral clearance is:
+
+$$
+C_{lateral}=\frac{1.24-1.040}{2}
+=\boxed{0.100\ \text{in per side}}
+$$
+
+Along the shaft-center direction, the output gear's extreme radius from the housing origin is:
+
+$$
+x_{max}=0.34375+\frac{1.040}{2}
+=0.86375\ \text{in}
+$$
+
+With a 2.00 in cavity length, the remaining clearance to that cavity end is:
+
+$$
+C_{end}=1.000-0.86375
+=\boxed{0.13625\ \text{in}}
+$$
+
+For an assumed 0.375 in gear thickness inside the 0.44 in total axial cavity, the nominal end clearance is:
+
+$$
+C_{axial}=\frac{0.44-0.375}{2}
+=\boxed{0.0325\ \text{in per side}}
+$$
+
+| Clearance Check | Nominal Result |
+|---|---:|
+| Largest gear lateral clearance | 0.100 in per side |
+| Largest gear clearance toward cavity end | 0.13625 in |
+| Largest gear axial end clearance | 0.0325 in per side |
+
+These calculations check nominal envelope dimensions only. They do not prove dynamic gear meshing, hub clearance, shaft retention, or manufacturable fits. A mated assembly using the actual gear STEP solids should be inspected before fabrication.
+
+### Revisions and Problems Encountered
+
+- **Fastening hardware:** The initial imported concept did not visibly include fasteners. Four simplified bolts and nuts were added to communicate the intended assembly method.
+- **Editable CAD requirement:** The first housing arrived as imported STEP geometry, which lacked native Onshape feature history. The housing was rebuilt using native sketches, extruded cuts, and a part mirror.
+- **Corner hole correction:** One mounting-hole profile in Sketch 4 was initially larger than intended and was corrected before the final design views.
+- **Exploded assembly:** An earlier exported STEP exploded view visually collapsed component locations after import into Onshape. It does not demonstrate a functional disassembly motion.
+- **Bearing terminology:** Catalog review confirmed that the modeled McMaster sleeves are graphite-lubricated. The alternative Oilite sleeves are oil-impregnated, and those material descriptions should not be interchanged.
+
+### Engineering Lessons
+
+The 18/48-tooth gear pair satisfies the specified 24:9 ratio. The bearing review also demonstrated why load capacity at a low reference rpm is not sufficient to approve a sleeve at operating speed, and why the housing press fit and shaft running fit require separate dimensions.
+
+Creating the upper housing by mirroring the lower geometry helped maintain matching pocket and fastener placement. However, the nominal 1.000 in shaft length relative to the 0.94 in total housing thickness leaves only approximately:
+
+$$
+\frac{1.000-0.940}{2}=\boxed{0.030\ \text{in per side}}
+$$
+
+of shaft protrusion if centered. An external coupling would therefore need longer shafts or a revised housing arrangement. A split-line seal also remains to be designed.
 
 ---
 
 ## 9. Conclusion
 
-This assignment involved the development of a gearbox housing and the mechanical evaluation of its shaft support arrangement.
-
-The parametric CAD model demonstrates the integration of gear components, shaft openings, bearing locations, and fastening features into a removable two-piece enclosure.
-
-Static equilibrium was used to calculate bearing reactions and the maximum shaft bending moment. Sleeve bearing pressure calculations were also developed to compare potential bearing dimensions.
-
-The project demonstrates the relationship between mechanical design, engineering analysis, component selection, and parametric CAD development.
-
-Further development would include final shaft material selection, bearing specification, manufacturing tolerances, and physical assembly testing.
-
----
-
-## 10. Project Deliverables
-
-| Deliverable | Documentation |
-|---|---|
-| Housing geometry | Figures 1–6 |
-| Shaft free-body diagram | Figure 7 |
-| Bearing span diagram | Figure 8 |
-| Completed gearbox assembly | Figure 9 |
-| Internal assembly | Figure 10 |
-| Shaft analysis | Sections 4–5 |
-| Sleeve bearing evaluation | Section 6 |
-| Engineering tables | Throughout documentation |
-| Parametric CAD | Onshape gearbox document |
-
-**Course:** MEGR 2156 – Design Projects Lab I
-
-**Project:** Gearbox Design and Shaft Analysis
-
-**Software:** Onshape
+I spent around 8 hours working on this assignment over the course of 3 days. 3 Hours were spent designing the CAD models while the other 5 had been spent through documentation and revisions. You can download the folder to access the parts and assemblies [here](https://drive.google.com/drive/folders/1oqGdbSh4yhDBONOkbHgVbcroTp35oyNG?usp=sharing) through OnShape. 
