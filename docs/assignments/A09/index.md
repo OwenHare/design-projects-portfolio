@@ -42,19 +42,19 @@ Using a minimum safety factor of 3, the allowable stress was calculated, followe
 
 ### Knowns, Unknowns, and FBD
 
-![Figure 1 - Belt and Pulley FBD](images/Belt1.jpg)
+![Figure 1 - Belt and Pulley FBD](Belt1.jpg)
 
 *Figure 1. Known parameters, unknown variables, and free-body diagram showing belt tensions, pulley reactions, and geometric constraints.*
 
 ### Symbolic Calculations
 
-![Figure 2 - Belt Symbolic Derivations](images/Belt2.jpg)
+![Figure 2 - Belt Symbolic Derivations](Belt2.jpg)
 
 *Figure 2. Symbolic derivations for tight-side tension, loose-side tension, transmitted torque, allowable belt stress, minimum area, and round-belt diameter.*
 
 ### Numerical Calculations
 
-![Figure 3 - Belt Numerical Results](images/Belt3.jpg)
+![Figure 3 - Belt Numerical Results](Belt3.jpg)
 
 *Figure 3. Numerical calculations for belt forces, torque, cross-sectional area, minimum diameter, and the selected belt size.*
 
@@ -66,7 +66,7 @@ The calculated normal stress was approximately 135.8 psi, producing a tensile yi
 
 ### Friction and Belt Length
 
-![Figure 4 - Friction and Belt Length](images/Belt4.jpg)
+![Figure 4 - Friction and Belt Length](Belt4.jpg)
 
 *Figure 4. Belt friction criterion, pulley wrap angle, circumference calculations, and preliminary belt elongation analysis.*
 
@@ -113,13 +113,13 @@ The belt exerts a resultant transverse force of 10 lbf on each pulley. With two 
 
 ### Knowns, Unknowns, and FBD
 
-![Figure 5 - Shaft FBD](images/Belt5.jpg)
+![Figure 5 - Shaft FBD](Belt5.jpg)
 
 *Figure 5. Shaft design parameters and free-body diagram showing the applied belt load, two bearing reactions, and support spacing.*
 
 ### Symbolic Torsion Analysis
 
-![Figure 6 - Shaft Symbolic Derivation](images/Belt6.jpg)
+![Figure 6 - Shaft Symbolic Derivation](Belt6.jpg)
 
 *Figure 6. Polar moment of inertia, torsional stress relationship, allowable shear stress, and symbolic minimum shaft diameter.*
 
@@ -129,7 +129,7 @@ A von Mises yield criterion was applied to determine the minimum shaft diameter 
 
 ### Numerical and Combined-Stress Analysis
 
-![Figure 7 - Shaft Numerical Analysis](images/Belt7.jpg)
+![Figure 7 - Shaft Numerical Analysis](Belt7.jpg)
 
 *Figure 7. Numerical shaft sizing, maximum bending moment, combined-stress calculations, and actual safety-factor verification.*
 
@@ -169,13 +169,13 @@ Material selection was based on the operating limits listed in *Machinery's Hand
 
 ### Knowns, Unknowns, and FBD
 
-![Figure 8 - Journal Bearing FBD](images/Belt8.jpg)
+![Figure 8 - Journal Bearing FBD](Belt8.jpg)
 
 *Figure 8. Journal bearing knowns, unknowns, radial bearing reaction, shaft loading, and sleeve-bearing geometry.*
 
 ### Symbolic and Numerical Calculations
 
-![Figure 9 - Journal Bearing Calculations](images/Belt9.jpg)
+![Figure 9 - Journal Bearing Calculations](Belt9.jpg)
 
 *Figure 9. Symbolic pressure, velocity, and PV equations, followed by numerical calculations and minimum bearing-length derivation.*
 
@@ -191,7 +191,7 @@ The calculated operating values were compared with the bearing manufacturer's al
 
 ### Bearing Material Selection
 
-![Figure 10 - Bearing Material Verification](images/Belt10.jpg)
+![Figure 10 - Bearing Material Verification](Belt10.jpg)
 
 *Figure 10. Sintered-bronze bearing limits, conservative continuous-use PV comparison, actual PV safety margin, and selected bearing length.*
 
@@ -245,7 +245,7 @@ The frame uses the following preliminary dimensions:
 
 ### Frame FBD
 
-![Figure 11 - Frame Design FBD](images/Belt11.jpg)
+![Figure 11 - Frame Design FBD](Belt11.jpg)
 
 *Figure 11. Frame geometry, structural material properties, and opposing compressive loads produced by the shaft-bearing reactions.*
 
@@ -255,7 +255,7 @@ Under the symmetric loading assumption, each plate carries equal and opposing 5 
 
 ### Frame Structural Analysis
 
-![Figure 12 - Frame Structural Calculations](images/Belt12.jpg)
+![Figure 12 - Frame Structural Calculations](Belt12.jpg)
 
 *Figure 12. Net cross-sectional area, axial compressive stress, yield safety factor, second moment of area, Euler buckling estimate, and axial deformation.*
 
