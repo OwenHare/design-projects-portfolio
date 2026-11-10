@@ -368,3 +368,5 @@ The proposed design meets the calculated strength and operating-margin requireme
    [Research Article](https://doi.org/10.1016/j.polymer.2018.12.062)
 
 ---
+
+*Open AI's ChatGPT was used in the making of this for formatting, and organizational purposes. All models, handwritten equations, and text has been handwritten by myself without the use of AI. Research of terminology was used through Google. Grammatical structure was completed with the assistance of Grammarly.*
